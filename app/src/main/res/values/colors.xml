@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffff</color>
+    <color name="colorList">#fafafa</color>
+    <color name="colorRow">#0693F9</color>
+    <color name="cs">#F96C06</color>
+    <color name="colorTab">#0461a5</color>
+    <color name="colorAppBar">#023052</color>
+    <color name="colorGradStart">#0693F9</color>
+    <color name="colorGradEnd">#F96C06</color>
+    <color name="colorDrawItem">#000000</color>
+    <color name="colorDrawCheckedItem">#0693F9</color>
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_weak"
+            android:icon="@drawable/ic_feather"
+            android:title="@string/weak" />
+
+        <item
+            android:id="@+id/nav_strong"
+            android:icon="@drawable/ic_strong"
+            android:title="@string/strong" />
+
+        <item
+            android:id="@+id/nav_reflexive"
+            android:icon="@drawable/ic_mirror"
+            android:title="@string/reflexive" />
+
+        <item
+            android:id="@+id/nav_separable"
+            android:icon="@drawable/ic_scissors"
+            android:title="@string/separable" />
+
+        <item
+            android:id="@+id/nav_nonseparable"
+            android:icon="@drawable/ic_agreement"
+            android:title="@string/non_separable" />
+
+        <item
+            android:id="@+id/nav_total"
+            android:icon="@drawable/ic_sigma"
+            android:title="@string/all_verbs" />
+    </group>
+</menu>
