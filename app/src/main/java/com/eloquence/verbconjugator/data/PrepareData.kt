@@ -3,6 +3,7 @@ package com.eloquence.verbconjugator.data
 import android.app.Application
 import android.content.Context
 import android.os.Environment
+import androidx.lifecycle.ViewModelProvider
 import com.eloquence.verbconjugator.model.Root
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
@@ -13,7 +14,8 @@ import java.util.zip.GZIPInputStream
 class PrepareData {
 
     fun loadData(context: Context, application: Application) {
-        val verbViewModel = VerbViewModel(application)
+        val verbViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(VerbViewModel::class.java)
         var root = Root()
         val gson = Gson()
         val verbFile = context.getFileStreamPath("verbenliste.json")
@@ -37,7 +39,8 @@ class PrepareData {
             } catch (e: IOException) {
                 e.stackTrace
             }
-            root.verben?.map { verbViewModel.insert(it) }
+
+            root.verben?.let { verbViewModel.bulkInsert(it) }
             context.deleteFile(verbFile.name)
         }
 

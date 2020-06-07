@@ -24,6 +24,10 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
         verbRepository.insert(verb)
     }
 
+    fun bulkInsert(verbs: List<Verb>) = viewModelScope.launch(Dispatchers.IO) {
+        verbRepository.bulkInsert(verbs)
+    }
+
     fun update(verb: Verb) = viewModelScope.launch(Dispatchers.IO) {
         verbRepository.update(verb)
     }

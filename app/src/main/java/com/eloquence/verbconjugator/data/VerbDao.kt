@@ -13,6 +13,9 @@ interface VerbDao {
     @Insert
     suspend fun insert(verb: Verb)
 
-    @Update(onConflict = OnConflictStrategy.REPLACE)
+    @Insert
+    suspend fun bulkInsert(verbs: List<Verb>)
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
     suspend fun update(verb: Verb)
 }
