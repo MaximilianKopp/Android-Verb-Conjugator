@@ -13,12 +13,22 @@ class VerbAdapter internal constructor(context: Context) :
     RecyclerView.Adapter<VerbAdapter.VerbViewHolder>() {
 
     private var verbs: List<Verb> = emptyList()
+    private lateinit var listener: OnItemClickListener
     private val layoutInflater: LayoutInflater = LayoutInflater.from(context)
 
     inner class VerbViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvInfinitive: TextView = itemView.findViewById(R.id.infinitive_view)
         var tvMeta: TextView = itemView.findViewById(R.id.meta_view)
         var tvTranslation: TextView = itemView.findViewById(R.id.translation_view)
+
+        init {
+            itemView.setOnClickListener(View.OnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(verbs[position])
+                }
+            })
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VerbViewHolder {
@@ -41,5 +51,13 @@ class VerbAdapter internal constructor(context: Context) :
     internal fun setVerbs(verbs: List<Verb>) {
         this.verbs = verbs
         notifyDataSetChanged()
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(verb: Verb)
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.listener = listener
     }
 }

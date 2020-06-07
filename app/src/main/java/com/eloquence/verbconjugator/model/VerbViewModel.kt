@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.eloquence.verbconjugator.data.VerbDatabase
 import com.eloquence.verbconjugator.data.VerbRepository
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -23,6 +22,10 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
 
     fun insert(verb: Verb) = viewModelScope.launch(Dispatchers.IO) {
         verbRepository.insert(verb)
+    }
+
+    fun update(verb: Verb) = viewModelScope.launch(Dispatchers.IO) {
+        verbRepository.update(verb)
     }
 
 }

@@ -1,5 +1,6 @@
 package com.eloquence.verbconjugator
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -7,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.eloquence.verbconjugator.adapter.VerbAdapter
+import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +30,16 @@ class MainActivity : AppCompatActivity() {
 
         verbViewModel.allVerbs.observe(this, Observer {
             verbAdapter.setVerbs(it)
+        })
+
+        verbAdapter.setOnItemClickListener(object : VerbAdapter.OnItemClickListener {
+            override fun onItemClick(verb: Verb) {
+                val intent = Intent(this@MainActivity, ConjugationTabActivity::class.java)
+                    .apply {
+                        putExtra("verb", verb)
+                    }
+                startActivity(intent)
+            }
         })
     }
 }
