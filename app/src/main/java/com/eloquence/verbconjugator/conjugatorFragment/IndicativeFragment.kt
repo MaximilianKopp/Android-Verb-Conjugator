@@ -109,6 +109,16 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
         return view
     }
 
+    override fun onStop() {
+        tts.stop()
+        super.onStop()
+    }
+
+    override fun onDestroyView() {
+        tts.shutdown()
+        super.onDestroyView()
+    }
+
     override fun onClick(v: View) {
         when (v.id) {
             R.id.speaker_participle_parts -> speak(tvParticipleParts.text)

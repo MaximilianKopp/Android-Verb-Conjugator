@@ -4,11 +4,16 @@ import android.os.Bundle
 import android.widget.TableLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.eloquence.verbconjugator.adapter.VerbPagerAdapter
+import com.eloquence.verbconjugator.model.VerbViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import kotlinx.android.synthetic.main.activity_conjugation_tab.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class ConjugationTabActivity : AppCompatActivity() {
 

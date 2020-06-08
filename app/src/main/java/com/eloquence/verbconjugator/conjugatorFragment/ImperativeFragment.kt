@@ -35,7 +35,6 @@ class ImperativeFragment : Fragment(), View.OnClickListener {
         tvImperativeSpeaker.setOnClickListener(this)
 
 
-
         tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
                 val result = tts.setLanguage(Locale.GERMAN)
@@ -49,6 +48,16 @@ class ImperativeFragment : Fragment(), View.OnClickListener {
         })
 
         return view
+    }
+
+    override fun onStop() {
+        tts.stop()
+        super.onStop()
+    }
+
+    override fun onDestroyView() {
+        tts.shutdown()
+        super.onDestroyView()
     }
 
     override fun onClick(v: View?) {

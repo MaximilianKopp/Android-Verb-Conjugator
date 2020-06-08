@@ -24,7 +24,9 @@ abstract class VerbDatabase : RoomDatabase() {
                     context.applicationContext,
                     VerbDatabase::class.java,
                     "verb_database"
-                ).build()
+                )
+                    .setJournalMode(JournalMode.TRUNCATE)
+                    .build()
                 INSTANCE = instance
                 return instance
             }

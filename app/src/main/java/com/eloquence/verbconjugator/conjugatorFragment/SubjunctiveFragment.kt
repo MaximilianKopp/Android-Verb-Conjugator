@@ -83,6 +83,16 @@ class SubjunctiveFragment : Fragment(), View.OnClickListener {
         return view
     }
 
+    override fun onStop() {
+        tts.stop()
+        super.onStop()
+    }
+
+    override fun onDestroyView() {
+        tts.shutdown()
+        super.onDestroyView()
+    }
+
     override fun onClick(v: View) {
         when (v.id) {
             R.id.speaker_subj_one -> speak(tvSubjOne.text)
