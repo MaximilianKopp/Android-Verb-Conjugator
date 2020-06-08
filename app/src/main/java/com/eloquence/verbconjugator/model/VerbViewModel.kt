@@ -18,6 +18,8 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
     val allReflexiveVerbs: LiveData<List<Verb>>
     val allSeparableVerbs: LiveData<List<Verb>>
     val allNonSeparableVerbs: LiveData<List<Verb>>
+    val allFavourites: LiveData<List<Verb>>
+
 
     init {
         val verbDao = VerbDatabase.getDatabase(application.applicationContext).verbDao()
@@ -28,6 +30,7 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
         allReflexiveVerbs = verbRepository.allReflexiveVerbs
         allSeparableVerbs = verbRepository.allSeparableVerbs
         allNonSeparableVerbs = verbRepository.allNonSeparableVerbs
+        allFavourites = verbRepository.allFavourites
     }
 
     fun insert(verb: Verb) = viewModelScope.launch(Dispatchers.IO) {
@@ -42,6 +45,6 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
         verbRepository.update(verb)
     }
 
-    fun getAllFilteredVerbs(constraint: String?) = verbRepository.getAllFilteredVerbs(constraint)
+    fun getAllFilteredVerbs(constraint: String?) = verbRepository.getFilteredVerbs(constraint)
 
 }

@@ -1,11 +1,11 @@
 package com.eloquence.verbconjugator
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.inputmethod.EditorInfo
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eloquence.verbconjugator.adapter.VerbAdapter
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var verbViewModel: VerbViewModel
     private lateinit var searchItem: MenuItem
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,21 +42,37 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        val toggle = ActionBarDrawerToggle(
+        ActionBarDrawerToggle(
             this,
             drawerLayout,
             toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
-        )
-        toggle.syncState()
+        ).apply { this.syncState() }
 
-        recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-        verbAdapter = VerbAdapter(this)
-        recyclerView.adapter = verbAdapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.itemAnimator = null
+        bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation).apply {
+            this.setOnNavigationItemSelectedListener(navListener)
+        }
+
+        verbAdapter = VerbAdapter(this).also {
+            it.setOnItemClickListener(object : VerbAdapter.OnItemClickListener {
+                override fun onItemClick(verb: Verb) {
+                    val intent = Intent(this@MainActivity, ConjugationTabActivity::class.java)
+                        .apply {
+                            putExtra("verb", verb)
+                        }
+                    startActivity(intent)
+                    searchItem.collapseActionView()
+                }
+            })
+        }
+
+        recyclerView = findViewById<RecyclerView>(R.id.recyclerview).also {
+            it.adapter = verbAdapter
+            it.layoutManager = LinearLayoutManager(this)
+            it.setHasFixedSize(true)
+            it.itemAnimator = null
+        }
 
         verbViewModel =
             ViewModelProvider
@@ -65,21 +83,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         verbViewModel.allVerbs.observe(this, Observer {
             verbAdapter.setVerbs(it)
         })
-
-        verbAdapter.setOnItemClickListener(object : VerbAdapter.OnItemClickListener {
-            override fun onItemClick(verb: Verb) {
-                val intent = Intent(this@MainActivity, ConjugationTabActivity::class.java)
-                    .apply {
-                        putExtra("verb", verb)
-                    }
-                startActivity(intent)
-                searchItem.collapseActionView()
-            }
-        })
     }
 
     override fun onStart() {
         super.onStart()
+        bottomNavigationView.selectedItemId = R.id.nav_home
         verbViewModel.allVerbs.observeForever {
             verbAdapter.setVerbs(it)
         }
@@ -143,5 +151,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         })
         return super.onCreateOptionsMenu(menu)
+    }
+
+    private val navListener = BottomNavigationView.OnNavigationItemSelectedListener {
+        val intent = Intent(Intent.ACTION_VIEW)
+        when (it.itemId) {
+            R.id.nav_home -> verbViewModel.allVerbs.observeForever { verb ->
+                verbAdapter.setVerbs(verb)
+            }
+
+            R.id.nav_favourites -> verbViewModel.allFavourites.observeForever { verb ->
+                verbAdapter.setVerbs(verb)
+            }
+
+            R.id.nav_link -> intent.apply {
+                this.data = (Uri.parse("http://www.google.de"))
+                val chooser = Intent.createChooser(intent, "Choose your Browser")
+                if (intent.resolveActivity(packageManager) != null) {
+                    startActivity(chooser)
+                }
+            }
+        }
+
+        return@OnNavigationItemSelectedListener true
     }
 }

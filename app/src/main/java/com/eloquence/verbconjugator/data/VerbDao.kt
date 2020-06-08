@@ -11,22 +11,26 @@ interface VerbDao {
     fun getAllVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE verbclass = 'weak' LIMIT 500")
-    fun getAllWeakVerbs(): LiveData<List<Verb>>
+    fun getWeakVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE verbclass = 'strong' LIMIT 500")
-    fun getAllStrongVerbs(): LiveData<List<Verb>>
+    fun getStrongVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE reflexivity = 'reflexive' LIMIT 500")
-    fun getAllReflexiveVerbs(): LiveData<List<Verb>>
+    fun getReflexiveVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE separability = 'separable' LIMIT 500")
-    fun getAllSeparableVerbs(): LiveData<List<Verb>>
+    fun getSeparableVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE separability = 'nonSeparable' LIMIT 500")
-    fun getAllNonSeparableVerbs(): LiveData<List<Verb>>
+    fun getNonSeparableVerbs(): LiveData<List<Verb>>
+
+    @Query("SELECT * FROM verb_table WHERE isFavourite = 1")
+
+    fun getFavourites(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE infinitivePresent LIKE '%' || :constraint || '%' Limit 10")
-    fun getAllFilteredVerbs(constraint: String?): LiveData<List<Verb>>
+    fun getFilteredVerbs(constraint: String?): LiveData<List<Verb>>
 
     @Insert
     suspend fun insert(verb: Verb)
