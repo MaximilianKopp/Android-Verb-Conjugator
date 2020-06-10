@@ -6,44 +6,56 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_constraintBottom_toTopOf="parent"
-    tools:context=".verbactivity.ConjugationTabActivity">
+    tools:context=".studyactivity.TensesActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/verb_tablayout"
+        android:id="@+id/study_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_gradient"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:tabTextAppearance="@style/CustomTabLayout"
         app:tabTextColor="@color/white">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_indicative"
+            android:id="@+id/tab_tenses_present"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/indicativeMode" />
+            android:text="@string/present" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_subjunctive"
+            android:id="@+id/tab_tenses_past"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/subjunctiveMode" />
+            android:text="@string/past" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_imperative"
+            android:id="@+id/tab_tenses_perfect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/imperativeMode" />
+            android:text="@string/perfect" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_infpart"
+            android:id="@+id/tab_tenses_PQP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/infinitive_participle" />
+            android:text="@string/pqp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_future_I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/future_i" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_future_II"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/future_ii" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/verb_view_pager"
+        android:id="@+id/study_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

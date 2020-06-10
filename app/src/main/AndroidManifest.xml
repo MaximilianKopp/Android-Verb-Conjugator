@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.eloquence.verbconjugator.MainActivity" />
-<!--        <activity android:name="com.eloquence.verbconjugator.ConjugationTabActivity" />-->
+<!--        <activity android:name="com.eloquence.verbconjugator.verbactivity.ConjugationTabActivity" />-->
 <!--        <activity android:name="com.eloquence.verbconjugator.GamesActivity" />-->
         <activity
             android:name="com.eloquence.verbconjugator.Splashscreen"
@@ -22,7 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConjugationTabActivity" />
+        <activity android:name=".verbactivity.ConjugationTabActivity" />
+        <activity android:name=".studyactivity.StudyActivity" />
+        <activity android:name=".adapter.StudyPagerAdapter" />
+        <activity android:name=".studyactivity.TensesActivity" />
     </application>
 
 </manifest>

@@ -3,36 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="none">
 
         <item
             android:id="@+id/nav_weak"
-            android:icon="@drawable/ic_feather"
+            android:icon="@drawable/ic_brightness_low_black_24dp"
             android:title="@string/weak" />
 
         <item
             android:id="@+id/nav_strong"
-            android:icon="@drawable/ic_strong"
+            android:icon="@drawable/ic_brightness_high_black_24dp"
             android:title="@string/strong" />
 
         <item
             android:id="@+id/nav_reflexive"
-            android:icon="@drawable/ic_mirror"
+            android:icon="@drawable/ic_remove_red_eye_black_24dp"
             android:title="@string/reflexive" />
 
         <item
             android:id="@+id/nav_separable"
-            android:icon="@drawable/ic_scissors"
+            android:icon="@drawable/ic_content_cut_black_24dp"
             android:title="@string/separable" />
 
         <item
             android:id="@+id/nav_nonseparable"
-            android:icon="@drawable/ic_agreement"
+            android:icon="@drawable/ic_attachment_black_24dp"
             android:title="@string/non_separable" />
 
         <item
             android:id="@+id/nav_total"
-            android:icon="@drawable/ic_sigma"
+            android:icon="@drawable/ic_all_inclusive_black_24dp"
             android:title="@string/all_verbs" />
     </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_favourites"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/favourites" />
+    </group>
+
 </menu>

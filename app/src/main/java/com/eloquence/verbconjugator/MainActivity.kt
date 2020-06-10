@@ -1,7 +1,6 @@
 package com.eloquence.verbconjugator
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -19,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eloquence.verbconjugator.adapter.VerbAdapter
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
+import com.eloquence.verbconjugator.studyactivity.StudyActivity
+import com.eloquence.verbconjugator.verbactivity.ConjugationTabActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -38,8 +39,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        drawerLayout = findViewById(R.id.drawer_layout)
-        val navigationView = findViewById<NavigationView>(R.id.nav_view)
+        drawerLayout = findViewById(R.id.main_layout)
+        val navigationView = findViewById<NavigationView>(R.id.nav_main_view)
         navigationView.setNavigationItemSelectedListener(this)
 
         ActionBarDrawerToggle(
@@ -126,6 +127,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_total -> verbViewModel.allVerbs.observeForever {
                 verbAdapter.setVerbs(it)
             }
+            R.id.nav_favourites -> verbViewModel.allFavourites.observeForever {
+                verbAdapter.setVerbs(it)
+            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -154,25 +158,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener {
-        val intent = Intent(Intent.ACTION_VIEW)
+
         when (it.itemId) {
             R.id.nav_home -> verbViewModel.allVerbs.observeForever { verb ->
                 verbAdapter.setVerbs(verb)
             }
 
-            R.id.nav_favourites -> verbViewModel.allFavourites.observeForever { verb ->
-                verbAdapter.setVerbs(verb)
-            }
+            R.id.nav_games -> null
 
-            R.id.nav_link -> intent.apply {
-                this.data = (Uri.parse("http://www.google.de"))
-                val chooser = Intent.createChooser(intent, "Choose your Browser")
-                if (intent.resolveActivity(packageManager) != null) {
-                    startActivity(chooser)
-                }
+            R.id.nav_study -> Intent(this, StudyActivity::class.java).apply {
+                startActivity(this)
             }
         }
-
         return@OnNavigationItemSelectedListener true
     }
 }

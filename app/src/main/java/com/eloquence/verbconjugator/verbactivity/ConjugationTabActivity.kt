@@ -1,19 +1,14 @@
-package com.eloquence.verbconjugator
+package com.eloquence.verbconjugator.verbactivity
 
 import android.os.Bundle
-import android.widget.TableLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
+import com.eloquence.verbconjugator.R
 import com.eloquence.verbconjugator.adapter.VerbPagerAdapter
-import com.eloquence.verbconjugator.model.VerbViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import kotlinx.android.synthetic.main.activity_conjugation_tab.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class ConjugationTabActivity : AppCompatActivity() {
 
@@ -24,8 +19,8 @@ class ConjugationTabActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_conjugation_tab)
 
-        val tabLayout = findViewById<TabLayout>(R.id.tablayout)
-        viewPager = findViewById(R.id.view_pager)
+        val tabLayout = findViewById<TabLayout>(R.id.verb_tablayout)
+        viewPager = findViewById(R.id.verb_view_pager)
         pagerAdapter = VerbPagerAdapter(
             supportFragmentManager,
             FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,
@@ -34,7 +29,7 @@ class ConjugationTabActivity : AppCompatActivity() {
         viewPager.offscreenPageLimit = 3
         viewPager.adapter = pagerAdapter
 
-        tablayout.addOnTabSelectedListener(object : OnTabSelectedListener {
+        verb_tablayout.addOnTabSelectedListener(object : OnTabSelectedListener {
 
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager.currentItem = tab.position

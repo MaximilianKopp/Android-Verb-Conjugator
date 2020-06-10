@@ -38,7 +38,6 @@
     <string name="logo">Logo</string>
     <string name="home">Home</string>
     <string name="favourites">Favourites</string>
-    <string name="link">Link</string>
     <string name="weak">Weak</string>
     <string name="strong">Strong</string>
     <string name="reflexive">Reflexive</string>
@@ -46,4 +45,18 @@
     <string name="non_separable">Non Separable</string>
     <string name="all_verbs">All Verbs</string>
     <string name="strong_verbs_training">Strong Verbs Training</string>
+    <string name="tenses">Tenses</string>
+    <string name="modal_verbs">Modal Verbs</string>
+    <string name="reflexive_verbs">Reflexive Verbs</string>
+    <string name="separable_verbs">Separable Verbs</string>
+    <string name="modes">Modes</string>
+    <string name="active_passive_voice">Active/Passive Voice</string>
+    <string name="games">Games</string>
+    <string name="study">Study</string>
+    <string name="present">Präsens</string>
+    <string name="past">Präteritum</string>
+    <string name="perfect">Perfekt</string>
+    <string name="pqp">PQP</string>
+    <string name="future_i">Futur I</string>
+    <string name="future_ii">Futur II</string>
 </resources>
