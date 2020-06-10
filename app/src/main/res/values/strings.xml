@@ -59,4 +59,7 @@
     <string name="pqp">PQP</string>
     <string name="future_i">Futur I</string>
     <string name="future_ii">Futur II</string>
+    <string name="present_tense_header">Definition</string>
+    <string name="verwendung">Verwendung</string>
+    <string name="bildung">Bildung</string>
 </resources>

@@ -21,7 +21,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="CustomTabLayout" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
-        <item name="android:textSize">6sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>
