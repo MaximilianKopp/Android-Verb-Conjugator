@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_gradient"
-        app:tabPaddingStart="4dp"
-        app:tabPaddingEnd="4dp"
+        app:tabPaddingStart="3dp"
+        app:tabPaddingEnd="3dp"
         app:tabTextAppearance="@style/CustomTabLayout"
         app:tabTextColor="@color/white">
 
