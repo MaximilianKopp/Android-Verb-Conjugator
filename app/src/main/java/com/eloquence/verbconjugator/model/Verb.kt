@@ -34,5 +34,6 @@ data class Verb(
     val separability: String,
     val pastform: String,
     val pastparticiple: String,
+    val translation: String?,
     var isFavourite: Boolean
 ) : Parcelable

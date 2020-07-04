@@ -7,7 +7,7 @@ import com.eloquence.verbconjugator.model.Verb
 @Dao
 interface VerbDao {
 
-    @Query("SELECT * FROM verb_table ORDER BY infinitivePresent ASC LIMIT 500")
+    @Query("SELECT * FROM verb_table ORDER BY verbclass ASC LIMIT 500")
     fun getAllVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE verbclass = 'weak' LIMIT 500")

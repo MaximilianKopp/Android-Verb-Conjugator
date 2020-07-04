@@ -46,7 +46,7 @@ class VerbAdapter internal constructor(context: Context) :
         holder.tvInfinitive.text = currentVerb.infinitivePresent
         holder.tvMeta.text =
             "${currentVerb.verbclass} ${currentVerb.reflexivity} ${currentVerb.separability}"
-        holder.tvTranslation.text = "Translation"
+        holder.tvTranslation.text = currentVerb.translation
 
         if (position % 2 == 0) {
             holder.itemView.setBackgroundColor(Color.parseColor("#fafafa"))

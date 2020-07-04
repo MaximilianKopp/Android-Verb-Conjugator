@@ -34,7 +34,6 @@
             android:id="@+id/infinitive_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_hearing"
             android:gravity="center"
             android:textSize="20sp" />
 
@@ -74,7 +73,6 @@
             android:id="@+id/participle_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_hearing"
             android:gravity="center"
             android:textSize="20sp" />
 
