@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.eloquence.verbconjugator.R
-import com.eloquence.verbconjugator.adapter.StudyPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_tenses.*
 
@@ -20,11 +19,7 @@ class TensesActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<TabLayout>(R.id.study_tablayout)
         viewPager = findViewById(R.id.study_view_pager)
-        pagerAdapter = StudyPagerAdapter(
-            supportFragmentManager,
-            FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,
-            tabLayout.tabCount
-        )
+
         viewPager.offscreenPageLimit = 3
         viewPager.adapter = pagerAdapter
 

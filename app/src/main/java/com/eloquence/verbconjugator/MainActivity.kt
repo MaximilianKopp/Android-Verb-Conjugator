@@ -18,8 +18,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eloquence.verbconjugator.adapter.VerbAdapter
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
-import com.eloquence.verbconjugator.studyactivity.StudyActivity
 import com.eloquence.verbconjugator.verbactivity.ConjugationTabActivity
+import com.eloquence.verbconjugator.verbactivity.InfoActivity
+import com.eloquence.verbconjugator.verbactivity.PrivacyActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -103,6 +104,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
         when (item.itemId) {
             R.id.nav_weak -> verbViewModel.allWeakVerbs.observeForever {
                 verbAdapter.setVerbs(it)
@@ -127,9 +129,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_total -> verbViewModel.allVerbs.observeForever {
                 verbAdapter.setVerbs(it)
             }
-            R.id.nav_favourites -> verbViewModel.allFavourites.observeForever {
-                verbAdapter.setVerbs(it)
-            }
+
+            R.id.nav_info -> startActivity(
+                Intent
+                    (
+                    applicationContext,
+                    InfoActivity::class.java
+                )
+            )
+
+            R.id.nav_privacy -> startActivity(
+                Intent(
+                    applicationContext,
+                    PrivacyActivity::class.java
+                )
+            )
+
+            R.id.nav_faq -> startActivity(Intent(applicationContext, PrivacyActivity::class.java))
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -157,18 +173,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return super.onCreateOptionsMenu(menu)
     }
 
-    private val navListener = BottomNavigationView.OnNavigationItemSelectedListener {
+    private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { it ->
 
         when (it.itemId) {
             R.id.nav_home -> verbViewModel.allVerbs.observeForever { verb ->
                 verbAdapter.setVerbs(verb)
             }
-
-            R.id.nav_games -> null
-
-            R.id.nav_study -> Intent(this, StudyActivity::class.java).apply {
-                startActivity(this)
+            R.id.nav_favourites -> verbViewModel.allFavourites.observeForever {
+                verbAdapter.setVerbs(it)
             }
+            R.id.nav_info -> startActivity(Intent(applicationContext, InfoActivity::class.java))
         }
         return@OnNavigationItemSelectedListener true
     }

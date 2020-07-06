@@ -42,9 +42,18 @@
         android:id="@+id/menu_bottom"
         android:checkableBehavior="none">
         <item
-            android:id="@+id/nav_favourites"
-            android:icon="@drawable/ic_favorite_black_24dp"
-            android:title="@string/favourites" />
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="@string/info" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_baseline_security_24"
+            android:title="@string/privacy" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_baseline_question_answer_24"
+            android:title="@string/faq" />
     </group>
+
 
 </menu>
