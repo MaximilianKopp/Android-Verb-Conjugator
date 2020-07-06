@@ -1,6 +1,8 @@
 package com.eloquence.verbconjugator.model
 
 import android.os.Parcelable
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
@@ -32,8 +34,8 @@ data class Verb(
     val reflexivity: String,
     val complexity: String,
     val separability: String,
+    val translation: String,
     val pastform: String,
     val pastparticiple: String,
-    val translation: String?,
     var isFavourite: Boolean
 ) : Parcelable

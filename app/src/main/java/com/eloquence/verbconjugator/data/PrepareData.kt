@@ -42,6 +42,7 @@ class PrepareData {
 
             root.verben?.let { verbViewModel.bulkInsert(it) }
             context.deleteFile(verbFile.name)
+
         }
 
     }

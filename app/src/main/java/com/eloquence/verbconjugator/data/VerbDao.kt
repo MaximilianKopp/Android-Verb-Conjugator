@@ -26,7 +26,6 @@ interface VerbDao {
     fun getNonSeparableVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE isFavourite = 1")
-
     fun getFavourites(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE infinitivePresent LIKE '%' || :constraint || '%' Limit 10")
