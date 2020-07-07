@@ -12,7 +12,7 @@
         android:background="@drawable/bg_gradient"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="@string/imprint" />
+        app:title="@string/privacy_police" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,14 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:text="@string/tmg_en"
-                android:textAlignment="center"
-                android:textSize="15sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/eu_en"
+                android:text="@string/privacy_en"
                 android:textAlignment="center"
                 android:textSize="15sp" />
 
@@ -46,16 +39,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:text="@string/tmg_de"
+                android:text="@string/privacy_de"
                 android:textAlignment="center"
                 android:textSize="15sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/eu_de"
-                android:textAlignment="center"
-                android:textSize="15sp" />
         </LinearLayout>
     </ScrollView>
 
