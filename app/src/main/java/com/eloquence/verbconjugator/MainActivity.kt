@@ -19,6 +19,7 @@ import com.eloquence.verbconjugator.adapter.VerbAdapter
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
 import com.eloquence.verbconjugator.verbactivity.ConjugationTabActivity
+import com.eloquence.verbconjugator.verbactivity.FaqActivity
 import com.eloquence.verbconjugator.verbactivity.InfoActivity
 import com.eloquence.verbconjugator.verbactivity.PrivacyActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -145,7 +146,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 )
             )
 
-            R.id.nav_faq -> startActivity(Intent(applicationContext, PrivacyActivity::class.java))
+            R.id.nav_faq -> startActivity(
+                Intent(
+                    applicationContext,
+                    FaqActivity::class.java
+                )
+            )
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
