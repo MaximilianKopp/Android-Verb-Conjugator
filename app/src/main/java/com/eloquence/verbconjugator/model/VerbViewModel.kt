@@ -1,13 +1,14 @@
 package com.eloquence.verbconjugator.model
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
+import android.provider.Contacts
+import androidx.lifecycle.*
+import androidx.lifecycle.Observer
 import com.eloquence.verbconjugator.data.VerbDatabase
 import com.eloquence.verbconjugator.data.VerbRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 
 class VerbViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -19,7 +20,6 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
     val allSeparableVerbs: LiveData<List<Verb>>
     val allNonSeparableVerbs: LiveData<List<Verb>>
     val allFavourites: LiveData<List<Verb>>
-
 
     init {
         val verbDao = VerbDatabase.getDatabase(application.applicationContext).verbDao()
@@ -33,8 +33,19 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
         allFavourites = verbRepository.allFavourites
     }
 
+    fun isEmpty(): Int = verbRepository.isEmpty()
+
+
     fun insert(verb: Verb) = viewModelScope.launch(Dispatchers.IO) {
         verbRepository.insert(verb)
+    }
+
+    fun deleteFavourite(verbId: Int) = viewModelScope.launch(Dispatchers.IO) {
+        verbRepository.deleteFavourite(verbId)
+    }
+
+    fun insertFavourite(favourite: Favourite) = viewModelScope.launch(Dispatchers.IO) {
+        verbRepository.insertFavourite(favourite)
     }
 
     fun bulkInsert(verbs: List<Verb>) = viewModelScope.launch(Dispatchers.IO) {
@@ -45,6 +56,12 @@ class VerbViewModel(application: Application) : AndroidViewModel(application) {
         verbRepository.update(verb)
     }
 
+    fun migrateFavourite(verbId: Int) = viewModelScope.launch(Dispatchers.IO) {
+        verbRepository.migrateFavourite(verbId)
+    }
+
     fun getAllFilteredVerbs(constraint: String?) = verbRepository.getFilteredVerbs(constraint)
+
+    fun getAllStoredFavourite() = verbRepository.allStoredFavourites
 
 }

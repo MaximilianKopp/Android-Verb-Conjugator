@@ -12,7 +12,7 @@ import kotlinx.android.parcel.Parcelize
 data class Verb(
 
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val verbId: Int,
     val indicativePresent: String,
     val indicativePast: String,
     val indicativePerfect: String,

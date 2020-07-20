@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -86,6 +87,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         verbViewModel.allVerbs.observe(this, Observer {
             verbAdapter.setVerbs(it)
         })
+
+        val storedFavourites = verbViewModel.getAllStoredFavourite()
+        storedFavourites.map { verbViewModel.migrateFavourite(it.verbId) }
     }
 
     override fun onStart() {

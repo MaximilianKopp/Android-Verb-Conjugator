@@ -12,9 +12,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.eloquence.verbconjugator.R
+import com.eloquence.verbconjugator.model.Favourite
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
-import kotlinx.android.synthetic.main.fragment_ind_tab.view.*
 import java.util.*
 
 class IndicativeFragment : Fragment(), View.OnClickListener {
@@ -31,6 +31,7 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
     private lateinit var cbFavourites: CheckBox
     private lateinit var verbViewModel: VerbViewModel
     private lateinit var verb: Verb
+    private lateinit var favourite: Favourite
 
 
     override fun onCreateView(
@@ -41,6 +42,7 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
         super.onCreateView(inflater, container, savedInstanceState)
         val view = layoutInflater.inflate(R.layout.fragment_ind_tab, container, false)
         val bundle = activity?.intent?.extras
+
         verb = bundle?.getParcelable("verb")!!
 
         val tvParticiplePartsSpeaker = view.findViewById<TextView>(R.id.speaker_participle_parts)
@@ -93,7 +95,9 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
                     VerbViewModel::class.java
                 )
 
+
         cbFavourites.isChecked = verb.isFavourite
+
 
         tts = TextToSpeech(context, OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -132,9 +136,12 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
                 if (cbFavourites.isChecked) {
                     verb.isFavourite = true
                     verbViewModel.update(verb)
+                    verbViewModel.insertFavourite(Favourite(null, verb.verbId, true))
+
                 } else {
                     verb.isFavourite = false
                     verbViewModel.update(verb)
+                    verbViewModel.deleteFavourite(verb.verbId)
                 }
         }
     }
