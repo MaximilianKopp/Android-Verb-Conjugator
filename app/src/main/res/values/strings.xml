@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Deutsche Verben</string>
+    <string name="app_name">German Verbs</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -29,9 +29,7 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="appName">Eloquence Verbconjugator</string>
+    <string name="appName">Eloquence Verb Conjugator</string>
     <string name="textSearchButton">Search</string>
     <string name="author">From Maximilian Kopp</string>
     <string name="add_to_favourites">Add to favourites</string>
@@ -44,7 +42,6 @@
     <string name="separable">Separable</string>
     <string name="non_separable">Non Separable</string>
     <string name="all_verbs">All Verbs</string>
-    <string name="strong_verbs_training">Strong Verbs Training</string>
     <string name="tenses">Tenses</string>
     <string name="modal_verbs">Modal Verbs</string>
     <string name="reflexive_verbs">Reflexive Verbs</string>
@@ -54,15 +51,15 @@
     <string name="games">Games</string>
     <string name="study">Study</string>
     <string name="info">Info</string>
-    <string name="present">Präsens</string>
-    <string name="past">Präteritum</string>
-    <string name="perfect">Perfekt</string>
-    <string name="pqp">PQP</string>
-    <string name="future_i">Futur I</string>
-    <string name="future_ii">Futur II</string>
+    <string name="present">Present</string>
+    <string name="past">Past</string>
+    <string name="perfect">Perfect</string>
+    <string name="pqp">Pluperfect</string>
+    <string name="future_i">Future I</string>
+    <string name="future_ii">Future II</string>
     <string name="definition">Definition</string>
-    <string name="verwendung">Verwendung</string>
-    <string name="bildung">Bildung</string>
+    <string name="verwendung">Usage</string>
+    <string name="bildung">Creation</string>
     <string name="imprint">Imprint/Impressum</string>
     <string name="privacy">Privacy</string>
     <string name="faq">Frequently asked questions</string>
