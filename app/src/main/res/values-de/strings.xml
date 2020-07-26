@@ -5,7 +5,7 @@
     <string name="indicativePresent">Präsens</string>
     <string name="indicativePast">Präteritum</string>
     <string name="indicativePerfect">Perfekt</string>
-    <string name="indicativePluPerfect">Plusquam.</string>
+    <string name="indicativePluPerfect">Plusquamperfekt</string>
     <string name="indicativeFutureOne">Futur I</string>
     <string name="indicativeFutureTwo">Futur II</string>
     <string name="subjunctiveMode">Konjunktiv</string>
@@ -35,10 +35,10 @@
     <string name="non_separable">Untrennbar</string>
     <string name="all_verbs">Alle Verben</string>
     <string name="privacy">Datenschutz</string>
-    <string name="faq">Häfuig gestellte Fragen</string>
+    <string name="faq">Häufig gestellte Fragen</string>
     <string name="faq_item">FAQ</string>
-    <string name="tmg_en">"Information in Pursuance of § 5 TMG: "</string>
-    <string name="tmg_de">"Angaben gemäß § 5 TMG:  Maximilian Kopp  Isaac Fulda Alee 4b  55124  +491747349384  Mainz  E-Mail: mail.eloquence@web.de  "</string>
+    <string name="tmg_en">Information in Pursuance of § 5 TMG: \nMaximilian Kopp \nIsaac Fulda Allee 4b  55124 Mainz \nTel: +491747349384 \nE-Mail: mail.eloquence@web.de</string>
+    <string name="tmg_de">Angaben gemäß § 5 TMG:  \nMaximilian Kopp \nIsaac Fulda Allee 4b  55124 Mainz \nTel: +491747349384 \nE-Mail: mail.eloquence@web.de</string>
     <string name="eu_en">Dispute Resolution The European Commission provides a platform for online dispute resolution (ODR):  https:// ec.europa.eu/consumers/odr.  You will find my email address above in the Impressum.  I am not willing or obliged to participate in dispute settlement proceedings in front of a Consumer Arbitration Board.</string>
     <string name="eu_de">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:  https://ec.europa.eu/consumers/odr.  Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</string>
     <string name="privacy_police">Privacy/Datenschutz</string>
@@ -47,7 +47,7 @@
     <string name="faq_one">F: Wie viele Verben werden abgedeckt?          A: Die App kann über 17000 Verben durch alle Zeiten konjugieren.</string>
     <string name="faq_two">F: Kann die App offline verwendet werden?           A: Ja, die App kann vollständig offline genutzt werden. Es ist keine Internetverbindung nötig.</string>
     <string name="faq_three">F: Enthält diese App Werbung von Drittanbietern?          A: Nein, die App ist vollständig werbefrei.</string>
-    <string name="faq_four">F: Warum kann ich mir die Konjugation nicht anhören?          A: Die App verwendet die interne Text-To-Speech Engine deines Geräts. Stell bitte sicher, dass du eine TTS-Engine (z.B. Google-TTS oder Samsung-TTS) auf deinem Gerät installiert und aktiviert hast.</string>
+    <string name="faq_four">F: Warum kann ich mir die Konjugation nicht anhören?          A: Die App verwendet die interne Text-To-Speech Engine deines Gerätes. Stell bitte sicher, dass du eine TTS-Engine (z.B. Google-TTS oder Samsung-TTS) auf deinem Gerät installiert und aktiviert hast.</string>
     <string name="faq_five">F: Warum fehlen manche deutsche Verben?          A: Diese App wurde nur von einer Person geschrieben. Bitte entschuldige eventuelle Fehler oder fehlende Verben. Die App wird kontinuierlich aktualisiert.</string>
     <string name="faq_six">F: Wie kann ich auf Fehler oder fehlende Verben hinweisen?          A: Du kannst mir einfach eine E-Mail senden: mail.eloquence@web.de</string>
     <string name="imprint">Impressum</string>
@@ -56,7 +56,7 @@
     <string name="definition">Definition</string>
     <string name="future_ii">Futur I</string>
     <string name="future_i">Futur II</string>
-    <string name="pqp">PQP</string>
+    <string name="pqp">Plusquamperfekt</string>
     <string name="perfect">Perfekt</string>
     <string name="past">Präteritum</string>
     <string name="present">Präsens</string>
