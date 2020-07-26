@@ -69,4 +69,9 @@
     <string name="reflexive_verbs">Reflexive Verben</string>
     <string name="modal_verbs">Modalverben</string>
     <string name="tenses">Zeiten</string>
+    <string name="recycler_end_comment">Benutze die Suche, um nach weiteren Verben zu suchen</string>
+    <string name="toast_added_favourite">Zu Favouriten hinzugefügt</string>
+    <string name="toast_removed_favourite">Von Favouriten entfernt</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

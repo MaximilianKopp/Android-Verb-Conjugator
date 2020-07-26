@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.eloquence.verbconjugator.R
@@ -31,8 +32,6 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
     private lateinit var cbFavourites: CheckBox
     private lateinit var verbViewModel: VerbViewModel
     private lateinit var verb: Verb
-    private lateinit var favourite: Favourite
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,7 +45,7 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
         verb = bundle?.getParcelable("verb")!!
 
         val tvParticiplePartsSpeaker = view.findViewById<TextView>(R.id.speaker_participle_parts)
-        tvParticiplePartsSpeaker.text = verb.infinitivePresent
+        tvParticiplePartsSpeaker.text = verb.infinitivePresent + " " + "\n" + "(" + verb.translation + ")"
         tvParticiplePartsSpeaker.setOnClickListener(this)
         tvParticipleParts = view.findViewById(R.id.participle_parts)
         tvParticipleParts.text = String.format(
@@ -56,6 +55,7 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
         val tvIndPresentSpeaker = view.findViewById<TextView>(R.id.speaker_ind_present)
         tvIndPresentSpeaker.setOnClickListener(this)
         tvIndPresent = view.findViewById(R.id.ind_present)
+
         tvIndPresent.text = verb.indicativePresent
 
         val tvIndPastSpeaker = view.findViewById<TextView>(R.id.speaker_ind_past)
@@ -95,9 +95,7 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
                     VerbViewModel::class.java
                 )
 
-
         cbFavourites.isChecked = verb.isFavourite
-
 
         tts = TextToSpeech(context, OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -137,11 +135,21 @@ class IndicativeFragment : Fragment(), View.OnClickListener {
                     verb.isFavourite = true
                     verbViewModel.update(verb)
                     verbViewModel.insertFavourite(Favourite(null, verb.verbId, true))
+                    Toast.makeText(
+                        context,
+                        getString(R.string.toast_added_favourite),
+                        Toast.LENGTH_SHORT
+                    ).show()
 
                 } else {
                     verb.isFavourite = false
                     verbViewModel.update(verb)
                     verbViewModel.deleteFavourite(verb.verbId)
+                    Toast.makeText(
+                        context,
+                        getString(R.string.toast_removed_favourite),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
         }
     }

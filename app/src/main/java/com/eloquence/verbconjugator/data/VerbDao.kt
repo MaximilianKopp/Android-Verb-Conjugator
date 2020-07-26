@@ -9,7 +9,7 @@ import com.eloquence.verbconjugator.model.Verb
 @Dao
 interface VerbDao {
 
-    @Query("SELECT * FROM verb_table ORDER BY verbclass ASC LIMIT 500")
+    @Query("SELECT * FROM verb_table ORDER BY verbclass ASC LIMIT 700")
     fun getAllVerbs(): LiveData<List<Verb>>
 
     @Query("SELECT * FROM verb_table WHERE verbclass = 'weak' LIMIT 500")
@@ -42,7 +42,7 @@ interface VerbDao {
     @Query("UPDATE verb_table SET isFavourite = 1 where verbId = :verbId")
     fun migrateFavourite(verbId: Int)
 
-    @Query("SELECT * FROM verb_table WHERE infinitivePresent LIKE '%' || :constraint || '%' Limit 10")
+    @Query("SELECT * FROM verb_table WHERE infinitivePresent LIKE '%' || :constraint || '%' Limit 100")
     fun getFilteredVerbs(constraint: String?): LiveData<List<Verb>>
 
     @Query("SELECT count(*) FROM verb_table")

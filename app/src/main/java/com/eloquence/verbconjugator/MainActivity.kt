@@ -16,6 +16,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import com.eloquence.verbconjugator.adapter.VerbAdapter
 import com.eloquence.verbconjugator.model.Verb
 import com.eloquence.verbconjugator.model.VerbViewModel
@@ -76,6 +77,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             it.layoutManager = LinearLayoutManager(this)
             it.setHasFixedSize(true)
             it.itemAnimator = null
+
+            it.addOnScrollListener(object : OnScrollListener() {
+                override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                    super.onScrollStateChanged(recyclerView, newState)
+                    if (!recyclerView.canScrollVertically(1)) {
+                        Toast.makeText(
+                            this@MainActivity,
+                            getString(R.string.recycler_end_comment),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            })
         }
 
         verbViewModel =

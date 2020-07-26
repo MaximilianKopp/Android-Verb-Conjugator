@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">German Verbs</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Öffne navigation drawer</string>
+    <string name="navigation_drawer_close">Schließe navigation drawer</string>
 
     <string name="indicativeMode">Indikativ</string>
     <string name="indicativePresent">Präsens</string>
@@ -24,10 +24,6 @@
     <string name="infinitiveTwo">Infinitiv II</string>
     <string name="participleOne">Partizip I</string>
     <string name="participletwo">Partizip II</string>
-    <string name="verb_speaker">hear_the_verb</string>
-    <string name="title_activity_conjugation_tab">ConjugationTabActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
 
     <string name="appName">Eloquence Verb Conjugator</string>
     <string name="textSearchButton">Search</string>
@@ -71,28 +67,13 @@
     <string name="privacy_police">Privacy/Datenschutz</string>
     <string name="privacy_en">No personal data (e.g. name, address or e-mail address) is collected or stored by this app. Furthermore, it is guaranteed that the provider of this app does not take any initiative for commercial use and further processing. The provider is not liable for any further processing of data that is performed by Google-Play within the Google Terms Of Use.</string>
     <string name="privacy_de">Durch das Anwenden dieser App werden keine personenbezogenenen (z. B. Name, Anschrift oder E-Mail-Adresse) Daten erhoben oder gespeichert. Ferner wird garantiert, dass von seitens des Betreibers dieser App keine Initiative zur gewerblichen Nutzung und Weiterverarbeitung ausgeht. Der Betreiber haftet nicht für eine eventuelle Weiterverarbeitung von Daten, die im Rahmen der Google-Nutzungsbedingungen von Google-Play selbst durchgeführt werden.</string>
-    <string name="faq_one">
-        \nF: How many verbs are covered?
-        \nA: More than 17000 verbs are covered and can be conjugated through all tenses. \n
-    </string>
-    <string name="faq_two">
-        \nF: Can I use this app offline?
-        \nA: Yes, no internet connection is necessary. All data is stored locally on your device. \n
-    </string>
-    <string name="faq_three">
-        \nF: Does this app contain any kind of ads or commercials?
-        \nA: This App is completey ad-free. \n
-    </string>
-    <string name="faq_four">
-        \nF: Why can I not listen to conjugation output?
-        \nA: The application uses the embedded text-to-speech engine on your device. Please make sure your have installed and enabled TTS (eg. Google-TTS or Samsung-TTS) on your device  \n
-    </string>
-    <string name="faq_five">
-        \nF: Why are some German verbs missing?
-        \nA: This app was made by only one person. Please excuse any inconvenience. The app is continuously updated in order to add missing verbs or fixing bugs \n
-    </string>
-    <string name="faq_six">
-        \nF: How can I submit suggestions or point out errors?
-        \nA: Just send me an e-mail to: \nmail.eloquence@web.de \n
-    </string>
+    <string name="faq_one">"F: How many verbs are covered?          A: More than 17000 verbs are covered and can be conjugated through all tenses.       "</string>
+    <string name="faq_two">"F: Can I use this app offline?          A: Yes, no internet connection is necessary. All data is stored locally on your device.       "</string>
+    <string name="faq_three">"F: Does this app contain any kind of ads or commercials?          A: This App is completey ad-free.       "</string>
+    <string name="faq_four">"F: Why can I not listen to conjugation output?          A: The application uses the embedded text-to-speech engine on your device. Please make sure your have installed and enabled TTS (eg. Google-TTS or Samsung-TTS) on your device        "</string>
+    <string name="faq_five">"F: Why are some German verbs missing?          A: This app was made by only one person. Please excuse any inconvenience. The app is continuously updated in order to add missing verbs or fixing bugs       "</string>
+    <string name="faq_six">"F: How can I submit suggestions or point out errors?          A: Just send me an e-mail to:  mail.eloquence@web.de       "</string>
+    <string name="toast_removed_favourite">Removed from favourites</string>
+    <string name="toast_added_favourite">Added to favourites</string>
+    <string name="recycler_end_comment">Use the search to look for more verbs</string>
 </resources>
