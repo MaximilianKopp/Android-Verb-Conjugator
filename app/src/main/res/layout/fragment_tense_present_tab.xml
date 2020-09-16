@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".studyFragment.PresentTenseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/definition"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Das Präsens drückt Ereignisse in der Gegenwart und in der Zukunft aus. Es ist die meist verwendete Zeitform."
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/verwendung"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="- Fakten oder Zuständen"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: Das ist Maria"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="- Die Handlung findet einmal, mehrmals oder nie statt"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: Jedes Wochenende fährt er nach Hause"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="- Dauer einer Handlung"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Sie spielt seit 10 Jahren Klavier"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="- Bereits vereinbarte Handlung in der Zukunft"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Nächste Woche besuchen mich meine Eltern"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/bildung"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_gradient">
+
+            <TableRow
+                android:background="@color/colorAppBar">
+                <TextView
+                    android:padding="3dip"
+                    android:text="Person"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Beispiel"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="1.Pers. Sg."
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="ich spiel -e"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="2.Pers. Sg."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="du spiel -st"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="3.Pers. Sg."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="er/sie/es spiel -t"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="1.Pers. Pl."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="wir spiel -en"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="2.Pers. Pl."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="ihr spiel -t"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="3.Pers. Pl."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="sie/Sie spiel -en"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Wichtige Merkmale"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Wortstamm auf d/t haben Endungen auf -st und -t ein vorgestelltes -e"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: beten - du betest - er betet - ihr betet"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Nächste Woche besuchen mich meine Eltern"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Wortstamm auf s/ß/z entfällt das Endungs-s in der 2. Pers. Sg."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: reisen - du reist - nicht: du reisst"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Wortstamm auf ie entfällt das Endungs-e"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: ich knie, wir knien, sie knien (nicht kniee, knieen)"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Infinitv auf eln/ern entfällt das Endungs-e. Bei Verben, die auf eln enden kann das e in der 1. Pers. Sg. ebenfalls entfallen "
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: sammeln, ich samme(e)le, wir sammeln, sie sammeln"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: wandern, ich wandere, wir wandern, sie wandern"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".studyFragment.PastTenseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/definition"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Das Präteritum beschreibt Fakten und Ereignisse in der Vergangenheit. Es wird vor allem in der Schriftsprache bei Erzählungen und Berichten verwendet."
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/verwendung"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="- abgeschlossene Handlung in der Vergangenheit"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Letzte Woche war ich im Museum."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="- Fakt oder Zustand in der Vergangenheit"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Es war sehr interessant und ich lernte viel"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/bildung"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_gradient">
+
+            <TableRow
+                android:background="@color/colorAppBar">
+                <TextView
+                    android:padding="3dip"
+                    android:text="Person"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="schwache Verben"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="starke Verben"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="1.Pers. Sg."
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="ich spiel -te"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="ich sah"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="2.Pers. Sg."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="du spiel -test"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="du sah -st"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="3.Pers. Sg."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="er/sie/es spiel -te"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="er/sie/es sah"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="1.Pers. Pl."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="wir spiel -ten"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="wir sah -en"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="2.Pers. Pl."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="ihr spiel -tet"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="ihr sah -t"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="3.Pers. Pl."
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="sie/Sie spiel -ten"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="sie/Sie sah -en"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorGradStart"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Wichtige Merkmale"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Viele starke Verben haben im Präteritum einen anderen Wortstamm"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> fahren - fuhr, gehen - ging"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Wortstamm auf s/ß/z wird das Endungs-s weggelassen"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: lesen - las"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Wortstamm auf ie entfällt das Endungs-e"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> Beispiel: schreien - schrie, wir/sie schrien (nicht: schriee, schrieen)"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Endet der Wortstamm auf d/t wird bei Endungen, die mit t/st beginnen ein e vor der Endung eingefügt "
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="23dp"
+            android:text="=> landen - ich landete, du landetest, er landete, wir landeten..."
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+</ScrollView>

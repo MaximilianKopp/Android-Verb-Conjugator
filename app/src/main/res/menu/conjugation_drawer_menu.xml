@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_weak"
+            android:icon="@drawable/ic_brightness_low_black_24dp"
+            android:title="@string/weak" />
+
+        <item
+            android:id="@+id/nav_strong"
+            android:icon="@drawable/ic_brightness_high_black_24dp"
+            android:title="@string/strong" />
+
+        <item
+            android:id="@+id/nav_reflexive"
+            android:icon="@drawable/ic_remove_red_eye_black_24dp"
+            android:title="@string/reflexive" />
+
+        <item
+            android:id="@+id/nav_separable"
+            android:icon="@drawable/ic_content_cut_black_24dp"
+            android:title="@string/separable" />
+
+        <item
+            android:id="@+id/nav_nonseparable"
+            android:icon="@drawable/ic_attachment_black_24dp"
+            android:title="@string/non_separable" />
+
+        <item
+            android:id="@+id/nav_total"
+            android:icon="@drawable/ic_all_inclusive_black_24dp"
+            android:title="@string/all_verbs" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="@string/info" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_baseline_security_24"
+            android:title="@string/privacy" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_baseline_question_answer_24"
+            android:title="@string/faq_item" />
+    </group>
+
+
+</menu>

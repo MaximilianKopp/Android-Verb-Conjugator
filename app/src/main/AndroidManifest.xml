@@ -9,13 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.eloquence.verbconjugator.MainActivity" />
+        <!--        <activity android:name="com.eloquence.verbconjugator.verbactivity.ConjugationTabActivity" />-->
+        <!--        <activity android:name="com.eloquence.verbconjugator.GamesActivity" />-->
+        <activity
+            android:name="com.eloquence.verbconjugator.Splashscreen"
+            android:noHistory="true"
+            android:theme="@style/splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".verbactivity.ConjugationTabActivity" />
+        <activity android:name=".verbactivity.InfoActivity" />
+        <activity android:name=".verbactivity.PrivacyActivity" />
+        <activity android:name=".verbactivity.FaqActivity" />
     </application>
-
 </manifest>

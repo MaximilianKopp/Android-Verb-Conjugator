@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toTopOf="parent"
+    tools:context=".studyactivity.TensesActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/study_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        app:tabPaddingStart="3dp"
+        app:tabPaddingEnd="3dp"
+        app:tabTextAppearance="@style/CustomTabLayout"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_present"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/present" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_past"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/past" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_perfect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perfect" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_PQP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pqp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_future_I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/future_i" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_tenses_future_II"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/future_ii" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/study_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
