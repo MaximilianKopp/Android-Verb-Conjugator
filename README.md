@@ -1,1 +1,12 @@
 # Android-Verb-Conjugator
+- Kostenlos
+- Keine Werbung
+- 100% offline
+- Keine Internetverbindung nötig
+- Beliebte Verben als Favouriten abspeichern
+- Integrierte Suchfunktion
+- Englische Übersetzung für alle Verben
+- Sprachausgabe über die Text-To-Speech Funktion Ihres Gerätes
+- Alle Verbgruppen: stark, schwach, reflexiv, trennbar, Modal- & Hilfsverben
+- Alle Modi: Indikativ, Konjunktiv, Imperativ, Infinitive & Partizipien
+- Alle Zeiten: Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I & Futur II
