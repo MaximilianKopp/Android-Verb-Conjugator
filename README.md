@@ -1,5 +1,5 @@
 # Android App - Deutsche Verben (Konjugator)
-Ein kostenloser Verben-Konjugator der über 70.000 Verben inkl. aller Modi und Tempora abdeckt 
+Ein kostenloser Verben-Konjugator, der über 70.000 Verben inkl. aller Modi und Tempora abdeckt 
 
 - Keine Werbung
 - 100% offline
